@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/config/" targetNamespace="http://www.example.org/config/">
+    <complexType name="plugin">
+    	<sequence>
+    		<element name="name" type="string" minOccurs="1"
+    			maxOccurs="1">
+    		</element>
+            <element name="class" type="string" minOccurs="1" maxOccurs="1"></element>
+            <element name="description" type="string" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    	</sequence>
+    </complexType>
+
+
+    <complexType name="configuration">
+        <all>
+            <element name="template-path" type="string" minOccurs="0" maxOccurs="1" />
+            <element name="output-path" type="string" maxOccurs="1" minOccurs="0" />
+            <element name="static-classes" type="tns:static-classes" minOccurs="0" maxOccurs="1"></element>
+            <element name="plugins" type="tns:plugins" minOccurs="0" maxOccurs="1" />    	</all>
+    </complexType>
+
+    <complexType name="plugins">
+    	<sequence>
+    		<element name="plugin" type="tns:plugin" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="configuration" type="tns:configuration"></element>
+
+    <complexType name="static-classes">
+    	<sequence>
+    		<element name="static-class" type="tns:static-class" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="static-class">
+    	<sequence>
+    		<element name="key-name" type="string"></element>
+    		<element name="class" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

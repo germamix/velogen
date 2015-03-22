@@ -1,0 +1,7 @@
+## Test-Template
+#set($_local = "test")
+#set($VELOSYS.dependTemplate = "test2.vm")
+Das ist nur $SU.capitalize($_local) (Version $VELOSYS.getEngineName() $VELOSYS.engineVersion)
+Generiert am: $VELOSYS.time
+$DB_P1
+$DB_P2

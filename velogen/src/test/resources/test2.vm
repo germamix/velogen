@@ -1,0 +1,9 @@
+## Test-Template
+#set($_local = "test")
+#set($VELOSYS.dependTemplate = "")
+#set($VELOSYS.fileSufix = "2.txt")
+Generiert am: $VELOSYS.time
+#foreach($item in $ITEMS)
+	- $item
+#end
+$SEU.escapeHtml('"brot" & "honig"')

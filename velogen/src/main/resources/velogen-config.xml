@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:configuration xmlns:tns="http://www.example.org/config/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/config/ config.xsd ">
+  <template-path>template-path</template-path>
+  <output-path>output-path</output-path>
+  <static-classes>
+    <static-class>
+      <key-name>SU</key-name>
+	  <class>org.apache.commons.lang.StringUtils</class>
+    </static-class>
+    <static-class>
+      <key-name>SEU</key-name>
+	  <class>org.apache.commons.lang.StringEscapeUtils</class>
+    </static-class>
+  </static-classes>
+  <plugins>
+    <plugin>
+      <name>items</name>
+      <class>ws.michalski.velogen.buildin.plugins.ItemPlugIn</class>
+      <description>Build-In Plugin for Item-List</description>
+    </plugin>
+  </plugins>
+</tns:configuration>
